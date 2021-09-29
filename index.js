@@ -17,7 +17,7 @@ function groupArrayElements(workArray, splitSize) {
     splitsize is a number and not 0
    */
 
-  if (!Array.isArray(workArray) || typeof splitSize !== 'number' || workArray.length === 0 || splitSize === 0) return [];
+  if (!Array.isArray(workArray) || typeof splitSize !== 'number' || workArray.length === 0 || splitSize <= 0) return [];
 
   // clone the array to work on it
   const cloneArray = [...workArray];

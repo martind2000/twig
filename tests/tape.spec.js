@@ -27,6 +27,14 @@ tapeSpec('Test function', (t) => {
 
       t.end();
     });
+
+    t.test('Rejects: Function called with negative split param', (t) => {
+      const result = groupArrayElements([1, 2, 3, 4, 5], -3);
+      t.deepEquals(result, []);
+      t.equal(result.length, 0);
+
+      t.end();
+    });
   });
 
   t.test('Data tests', (t) => {
